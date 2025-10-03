@@ -4,3 +4,6 @@
     
     options:
       logging: CLOUD_LOGGING_ONLY
+      
+    - name: 'gcr.io/cloud-builders/docker'
+      args: ['push', '${_LOCATION}-docker.pkg.dev/$PROJECT_ID/${_REPOSITORY}/${_IMAGE}:${_TAG}']
